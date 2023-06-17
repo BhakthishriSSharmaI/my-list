@@ -7,7 +7,7 @@ body{
   display: flex;
 }
 #add-button{
-  background-color: blue;
+  background-color: dodgerblue;
   color: white;
   border-radius: 8px;
   padding: 10px 25px;
