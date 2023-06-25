@@ -97,3 +97,10 @@ img{
   
 
 }
+img{
+  opacity: 80%;
+}
+img:hover{
+opacity: 100%;
+
+}

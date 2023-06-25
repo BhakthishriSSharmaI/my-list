@@ -1,21 +1,29 @@
 var addButton = document.getElementById('add-button');
 var listInput = document.getElementById('list-input');
 var listedItems = document.getElementById('listed-items');
-addButton.addEventListener("click",()=>{
- 
+addButton.addEventListener("click", () => {
   var inputItem = listInput.value;
-  if(inputItem==" ")
-  return;
-  const div=document.createElement("div");
+  listInput.value ="";
+  if(inputItem == "")
+    return;
+  const div = document.createElement("div");
   div.classList.add("listed-item");
-  const para=document.createElement("p");
+  const para = document.createElement("p");
   para.classList.add("listed-item-text");
   div.appendChild(para);
-  para.innerText=inputItem;
-  const image=document.createElement("img");
-  image.src="https://www.svgrepo.com/show/468533/delete-alt.svg";
+  para.innerText = inputItem;
+  const image = document.createElement("img");
+  image.src = "https://www.svgrepo.com/show/468533/delete-alt.svg";
+  image.addEventListener('click',
+    function (event) {
+      const listItem = event.target.parentNode;
+      listItem.remove();
+    })
   div.appendChild(image);
   listedItems.appendChild(div);
-
 });
-     
+
+
+
+  
+
